@@ -7,23 +7,10 @@ selection during learning process like artificial neural networks do.
 
 ## Curse of Dimensionality
 
-The curse of dimensionality refers to the phenomenon that many types of
-data analysis become significantly harder as the dimensionality of the data
-increases. Specifically, as dimensionality increases, the data becomes increasingly
-sparse in the space that it occupies. For classification, this can mean
-that there are not enough data objects to allow the creation of a model that
-reliably assigns a class to all possible objects. For clustering, the definitions
-of density and the distance between points, which are critical for clustering,
-become less meaningful.
+The curse of dimensionality refers to the phenomenon that many types of data analysis become significantly harder as the dimensionality of the data increases. Specifically, as dimensionality increases, the data becomes increasingly sparse in the space that it occupies. For classification, this can mean that there are not enough data objects to allow the creation of a model that reliably assigns a class to all possible objects. For clustering, the definitions of density and the distance between points, which are critical for clustering, become less meaningful.
 
-In high-dimensional data sets, the traditional Euclidean
-notion of density, which is the number of points per unit volume,
-becomes meaningless. To see this, consider that as the number of dimensions
-increases, the volume increases rapidly, and unless the number of points grov/s
-exponentially with the number of dimensions, the density tends to 0. Also, proximity
-tends to become more uniform in high-dimensional spaces. Another way to
-view this fact is that there are more dimensions (attributes) that contribute to
-the proximity between two points and this tends to make the proximity more
-uniform. Since most clustering techniques are based on proximity or density,
-they can often have difficulty with high-dimensional data. One approach to
-addressing such problems is to employ dimensionality reduction techniques.
+In high-dimensional data sets, the traditional Euclidean notion of density, which is the number of points per unit volume, becomes meaningless. To see this, consider that as the number of dimensions increases, the volume increases rapidly, and unless the number of points grows exponentially with the number of dimensions, the density tends to 0. Also, proximity tends to become more uniform in high-dimensional spaces. Another way to view this fact is that there are more dimensions (attributes) that contribute to the proximity between two points and this tends to make the proximity more uniform. Since most clustering techniques are based on proximity or density, they can often have difficulty with high-dimensional data. One approach to addressing such problems is to employ dimensionality reduction techniques as discussed below.
+
+In machine learning problems that involve learning a "state-of-nature" from a finite number of data samples in a high-dimensional feature space with each feature having a range of possible values, typically an enormous amount of training data is required to ensure that there are several samples with each combination of values. A typical rule of thumb is that there should be at least 5 training examples for each dimension in the representation. With a fixed number of training samples, the predictive power of a classifier or regressor first increases as number of dimensions/features used is increased but then decreases, which is known as Hughes phenomenon or peaking phenomena.
+
+### Combinatorial Explosion
